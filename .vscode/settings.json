@@ -61,6 +61,8 @@
         "*.meta": "yaml",
         "*.prefab": "yaml",
         "*.unity": "yaml",
+        "*.uxml": "xml",
+        "*.uss": "css"
     },
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {

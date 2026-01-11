@@ -1,0 +1,13 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/CubeUI/CubeUIStyleSheet.uss?fileID=7433441132597879392&amp;guid=b3abf4295e82e7a4192310190b394d60&amp;type=3#CubeUIStyleSheet"/>
+    <ui:Foldout text="Actions " style="align-items: flex-start;">
+        <ui:VisualElement name="ButtonContainer" style="flex-grow: 0; flex-direction: row; justify-content: center; align-self: center; flex-wrap: wrap;">
+            <ui:Button text="Spin" name="SpinButton" class="button"/>
+            <ui:Button text="Rotate " name="RotateButton" class="button"/>
+            <ui:Button text="Stop" name="StopButton" class="button"/>
+            <ui:Button text="Reset " name="ResetButton" class="button"/>
+            <ui:Button text="Change Color
+" name="ChangeColorButton" class="button"/>
+        </ui:VisualElement>
+    </ui:Foldout>
+</ui:UXML>
