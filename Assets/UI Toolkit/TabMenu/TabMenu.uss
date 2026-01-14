@@ -1,0 +1,35 @@
+:root {
+}
+
+.tab {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-left-color: rgb(0, 179, 253);
+    border-right-color: rgb(0, 179, 253);
+    border-top-color: rgb(0, 179, 253);
+    border-bottom-color: rgb(0, 179, 253);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-color: rgb(255, 255, 255);
+}
+
+.tab:hover {
+    background-color: rgb(172, 172, 172);
+}
+
+.tabContent {
+    flex-grow: 1;
+    background-color: rgb(213, 251, 255);
+}
+
+.selectedTab {
+    background-color: rgb(75, 255, 229);
+}
+
+.unselectedTabContent {
+    display: none;
+}

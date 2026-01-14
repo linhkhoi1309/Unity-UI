@@ -1,0 +1,15 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/TabMenu/TabMenu.uss?fileID=7433441132597879392&amp;guid=f0b93425790ea1049a1475dcf9b19d9a&amp;type=3#TabMenu"/>
+    <ui:VisualElement name="TabMenuContainer" style="flex-grow: 1;">
+        <ui:VisualElement name="Tabs" style="flex-grow: 0; flex-direction: row; align-self: flex-start;">
+            <ui:Label text="London " name="London" class="tab tabSelected selectedTab"/>
+            <ui:Label text="Tokyo " name="Tokyo" class="tab"/>
+            <ui:Label text="Madrid " name="Madrid" class="tab"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="TabContent" style="flex-grow: 1;">
+            <ui:Label text="London is the capital city of United Kingdom " name="LondonContent" class="tabContent"/>
+            <ui:Label text="Tokyo is the capital city of Japan " name="TokyoContent" class="tabContent tabContentUnselected unselectedTabContent"/>
+            <ui:Label text="Madrid is the capital city of Spain " name="MadridContent" class="tabContent tabContentUnselected unselectedTabContent"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,15 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Editor/EditorUI.uss?fileID=7433441132597879392&amp;guid=c4943e6b54e13bb41be7c141062c2dd3&amp;type=3#EditorUI"/>
+    <ui:VisualElement name="OptionContainer" style="flex-grow: 0;">
+        <ui:VisualElement name="Sunny" style="flex-grow: 1;">
+            <ui:Toggle label="Sunny" name="SunnyToggle" class="option"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="Rainy" class="option" style="flex-grow: 1;">
+            <ui:Toggle label="Rainy" name="RainyToggle" class="option"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="Windy" class="option" style="flex-grow: 1;">
+            <ui:Toggle label="Windy " name="WindyToggle" class="option"/>
+        </ui:VisualElement>
+        <ui:Button text="Submit " name="SubmitButton"/>
+    </ui:VisualElement>
+</ui:UXML>
