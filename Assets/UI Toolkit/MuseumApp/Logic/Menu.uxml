@@ -1,0 +1,11 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Stylesheets/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp" />
+    <engine:VisualElement name="BaseContainer" style="flex-grow: 1; align-items: flex-end; margin-top: 26px; margin-right: 26px; margin-bottom: 26px; margin-left: 26px;">
+        <engine:VisualElement name="MenuBackground" class="menu">
+            <engine:Button text="App Settings" name="AppSettings" class="button button-margins button__text" />
+            <engine:Button text="Account" name="Account" class="button button-margins button__text" />
+            <engine:Button text="Toggle App Theme" name="ToggleAppTheme" class="button button-margins button__text" />
+            <engine:Button text="Logout" name="Logout" class="button button-margins button-last button__text" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

@@ -1,0 +1,457 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/Logic/MuseumApp.uss?fileID=7433441132597879392&amp;guid=297baa6b7598e6d4b9d8c1ff1b695123&amp;type=3#MuseumApp"/>
+    <engine:VisualElement name="BaseContainer" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" class="background" style="flex-grow: 1; justify-content: space-between; align-items: stretch;">
+        <engine:VisualElement name="StatusBar" class="status-bar">
+            <engine:Label text="11:11 am " name="StatusBarText" class="text"/>
+            <engine:VisualElement name="Spacer" style="flex-grow: 1;"/>
+            <engine:VisualElement name="StatusBarIconsContainer" style="flex-direction: row;">
+                <engine:VisualElement name="StatusBarIcon" class="status-bar__icons"/>
+                <engine:VisualElement name="StatusBarIcon" class="status-bar__icons"/>
+                <engine:VisualElement name="StatusBarIcon" class="status-bar__icons status-bar__icons-highlighted"/>
+                <engine:VisualElement name="StatusBarIcon" class="status-bar__icons"/>
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:Button text="&#8801;" name="ToggleMenu" class="button" style="width: 80px; align-self: flex-end; font-size: 55px; margin-top: 26px; margin-right: 26px; margin-bottom: 0; margin-left: 26px;"/>
+        <engine:VisualElement name="AppContent" style="flex-grow: 1;">
+            <engine:VisualElement name="MainPage" template="MainPage" style="transition-duration: 0.1s;">
+                <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                <engine:VisualElement name="BaseContainer" style="flex-grow: 1; justify-content: center;">
+                    <engine:Label text="PLACEHOLDER" name="Header" class="text header-text">
+                        <Bindings>
+                            <engine:DataBinding property="text" data-source-path="header" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </engine:Label>
+                    <engine:Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." name="TagLine" class="text" style="white-space: normal; font-size: 35px; -unity-text-align: upper-center; margin-top: 25px; margin-right: 65px; margin-bottom: 25px; margin-left: 65px;">
+                        <Bindings>
+                            <engine:DataBinding property="text" data-source-path="tagLine" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </engine:Label>
+                    <engine:ScrollView horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" name="VerticalScrollView" mouse-wheel-scroll-size="390">
+                        <engine:VisualElement name="MainContent" style="flex-grow: 1; margin-right: 30px; margin-left: 30px;">
+                            <engine:ScrollView touch-scroll-type="Elastic" horizontal-scroller-visibility="AlwaysVisible" vertical-scroller-visibility="Hidden" mode="Horizontal" name="TilesHorizontalScrollViewTop" mouse-wheel-scroll-size="390" elasticity="0.025" class="tile-container" style="flex-grow: 1;">
+                                <engine:VisualElement name="tilesTopContainer" class="tile-scroll-view">
+                                    <engine:VisualElement name="tile" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesTop[0].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesTop[0].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                    <engine:VisualElement name="tile" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesTop[1].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesTop[1].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                    <engine:VisualElement name="tile" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesTop[2].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesTop[2].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                    <engine:VisualElement name="tile" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesTop[3].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesTop[3].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                    <engine:VisualElement name="tile" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesTop[4].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesTop[4].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                    <engine:VisualElement name="tile" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesTop[5].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesTop[5].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                    <engine:VisualElement name="tile" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesTop[6].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesTop[6].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                    <engine:VisualElement name="tile" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesTop[7].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesTop[7].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                </engine:VisualElement>
+                            </engine:ScrollView>
+                            <engine:VisualElement name="Articles" class="article-container">
+                                <engine:VisualElement name="Article-0" template="Article">
+                                    <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                    <engine:VisualElement name="ArticleContainer" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; align-items: flex-start; justify-content: flex-start; padding-top: 26px; padding-right: 26px; padding-bottom: 26px; padding-left: 26px; flex-grow: 1;">
+                                        <engine:Label text="Long Article Title" name="ArticleTitle" class="text" style="font-size: 58px; -unity-text-align: middle-left; width: 100%; -unity-font-style: bold; white-space: normal;">
+                                            <Bindings>
+                                                <engine:DataBinding property="text" data-source-path="articles[0].title" binding-mode="ToTarget"/>
+                                            </Bindings>
+                                        </engine:Label>
+                                        <engine:VisualElement name="Tag" class="tag">
+                                            <engine:Label name="TagText" text="Tag" class="tag__text text" style="-unity-font-style: bold; font-size: 27px; -unity-text-align: middle-center;">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="articles[0].tag" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                        <engine:Label text="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor." name="ArticleSummary" class="text thumnail-text article-summary-text">
+                                            <Bindings>
+                                                <engine:DataBinding property="text" data-source-path="articles[0].description" binding-mode="ToTarget"/>
+                                            </Bindings>
+                                        </engine:Label>
+                                        <engine:Button text="VIEW" name="Button" class="button" style="margin-top: auto; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+                                            <engine:VisualElement name="ButtonIcon" style="width: 50px; height: 50px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; flex-shrink: 0; background-color: rgb(255, 255, 255); border-top-left-radius: 88px; border-top-right-radius: 88px; border-bottom-right-radius: 88px; border-bottom-left-radius: 88px;"/>
+                                        </engine:Button>
+                                    </engine:VisualElement>
+                                </engine:VisualElement>
+                                <engine:VisualElement name="Article-1" template="Article">
+                                    <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                    <engine:VisualElement name="ArticleContainer" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; align-items: flex-start; justify-content: flex-start; padding-top: 26px; padding-right: 26px; padding-bottom: 26px; padding-left: 26px; flex-grow: 1;">
+                                        <engine:Label text="Long Article Title" name="ArticleTitle" class="text" style="font-size: 58px; -unity-text-align: middle-left; width: 100%; -unity-font-style: bold; white-space: normal;">
+                                            <Bindings>
+                                                <engine:DataBinding property="text" data-source-path="articles[1].title" binding-mode="ToTarget"/>
+                                            </Bindings>
+                                        </engine:Label>
+                                        <engine:VisualElement name="Tag" class="tag">
+                                            <engine:Label name="TagText" text="Tag" class="tag__text text" style="-unity-font-style: bold; font-size: 27px; -unity-text-align: middle-center;">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="articles[1].tag" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                        <engine:Label text="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor." name="ArticleSummary" class="text thumnail-text article-summary-text">
+                                            <Bindings>
+                                                <engine:DataBinding property="text" data-source-path="articles[1].description" binding-mode="ToTarget"/>
+                                            </Bindings>
+                                        </engine:Label>
+                                        <engine:Button text="VIEW" name="Button" class="button" style="margin-top: auto; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+                                            <engine:VisualElement name="ButtonIcon" style="width: 50px; height: 50px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; flex-shrink: 0; background-color: rgb(255, 255, 255); border-top-left-radius: 88px; border-top-right-radius: 88px; border-bottom-right-radius: 88px; border-bottom-left-radius: 88px;"/>
+                                        </engine:Button>
+                                    </engine:VisualElement>
+                                </engine:VisualElement>
+                            </engine:VisualElement>
+                            <engine:VisualElement name="Articles" class="article-container">
+                                <engine:VisualElement name="Article-2" template="Article">
+                                    <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                    <engine:VisualElement name="ArticleContainer" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; align-items: flex-start; justify-content: flex-start; padding-top: 26px; padding-right: 26px; padding-bottom: 26px; padding-left: 26px; flex-grow: 1;">
+                                        <engine:Label text="Long Article Title" name="ArticleTitle" class="text" style="font-size: 58px; -unity-text-align: middle-left; width: 100%; -unity-font-style: bold; white-space: normal;">
+                                            <Bindings>
+                                                <engine:DataBinding property="text" data-source-path="articles[2].title" binding-mode="ToTarget"/>
+                                            </Bindings>
+                                        </engine:Label>
+                                        <engine:VisualElement name="Tag" class="tag">
+                                            <engine:Label name="TagText" text="Tag" class="tag__text text" style="-unity-font-style: bold; font-size: 27px; -unity-text-align: middle-center;">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="articles[2].tag" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                        <engine:Label text="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor." name="ArticleSummary" class="text thumnail-text article-summary-text">
+                                            <Bindings>
+                                                <engine:DataBinding property="text" data-source-path="articles[2].description" binding-mode="ToTarget"/>
+                                            </Bindings>
+                                        </engine:Label>
+                                        <engine:Button text="VIEW" name="Button" class="button" style="margin-top: auto; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+                                            <engine:VisualElement name="ButtonIcon" style="width: 50px; height: 50px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; flex-shrink: 0; background-color: rgb(255, 255, 255); border-top-left-radius: 88px; border-top-right-radius: 88px; border-bottom-right-radius: 88px; border-bottom-left-radius: 88px;"/>
+                                        </engine:Button>
+                                    </engine:VisualElement>
+                                </engine:VisualElement>
+                                <engine:VisualElement name="Article-3" template="Article">
+                                    <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                    <engine:VisualElement name="ArticleContainer" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; align-items: flex-start; justify-content: flex-start; padding-top: 26px; padding-right: 26px; padding-bottom: 26px; padding-left: 26px; flex-grow: 1;">
+                                        <engine:Label text="Long Article Title" name="ArticleTitle" class="text" style="font-size: 58px; -unity-text-align: middle-left; width: 100%; -unity-font-style: bold; white-space: normal;">
+                                            <Bindings>
+                                                <engine:DataBinding property="text" data-source-path="articles[3].title" binding-mode="ToTarget"/>
+                                            </Bindings>
+                                        </engine:Label>
+                                        <engine:VisualElement name="Tag" class="tag">
+                                            <engine:Label name="TagText" text="Tag" class="tag__text text" style="-unity-font-style: bold; font-size: 27px; -unity-text-align: middle-center;">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="articles[3].tag" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                        <engine:Label text="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor." name="ArticleSummary" class="text thumnail-text article-summary-text">
+                                            <Bindings>
+                                                <engine:DataBinding property="text" data-source-path="articles[3].description" binding-mode="ToTarget"/>
+                                            </Bindings>
+                                        </engine:Label>
+                                        <engine:Button text="VIEW" name="Button" class="button" style="margin-top: auto; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+                                            <engine:VisualElement name="ButtonIcon" style="width: 50px; height: 50px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; flex-shrink: 0; background-color: rgb(255, 255, 255); border-top-left-radius: 88px; border-top-right-radius: 88px; border-bottom-right-radius: 88px; border-bottom-left-radius: 88px;"/>
+                                        </engine:Button>
+                                    </engine:VisualElement>
+                                </engine:VisualElement>
+                            </engine:VisualElement>
+                            <engine:ScrollView touch-scroll-type="Elastic" horizontal-scroller-visibility="AlwaysVisible" vertical-scroller-visibility="Hidden" mode="Horizontal" name="TilesHorizontalScrollViewMiddle" mouse-wheel-scroll-size="390" elasticity="0.025" class="tile-container">
+                                <engine:VisualElement name="tilesMiddleContainer" class="tile-scroll-view">
+                                    <engine:VisualElement name="tile0" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesMiddle[0].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesMiddle[0].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                    <engine:VisualElement name="tile1" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesMiddle[1].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesMiddle[1].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                    <engine:VisualElement name="tile2" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesMiddle[2].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesMiddle[2].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                    <engine:VisualElement name="tile3" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesMiddle[3].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesMiddle[3].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                    <engine:VisualElement name="tile4" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesMiddle[4].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesMiddle[4].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                    <engine:VisualElement name="tile5" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesMiddle[5].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesMiddle[5].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                    <engine:VisualElement name="tile6" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesMiddle[6].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesMiddle[6].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                    <engine:VisualElement name="tile7" template="Tile" class="tile">
+                                        <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                        <engine:VisualElement name="VisualElement" class="tile">
+                                            <engine:Button name="TileImage" selectable="false" class="tile__image">
+                                                <Bindings>
+                                                    <engine:DataBinding property="style.backgroundImage" data-source-path="tilesMiddle[7].icon" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Button>
+                                            <engine:Label name="TileTitle" text="Title" class="text tile__text">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="tilesMiddle[7].title" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                    </engine:VisualElement>
+                                </engine:VisualElement>
+                            </engine:ScrollView>
+                            <engine:VisualElement name="Articles" class="article-container">
+                                <engine:VisualElement name="Article-4" template="Article">
+                                    <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                    <engine:VisualElement name="ArticleContainer" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; align-items: flex-start; justify-content: flex-start; padding-top: 26px; padding-right: 26px; padding-bottom: 26px; padding-left: 26px; flex-grow: 1;">
+                                        <engine:Label text="Long Article Title" name="ArticleTitle" class="text" style="font-size: 58px; -unity-text-align: middle-left; width: 100%; -unity-font-style: bold; white-space: normal;">
+                                            <Bindings>
+                                                <engine:DataBinding property="text" data-source-path="articles[4].title" binding-mode="ToTarget"/>
+                                            </Bindings>
+                                        </engine:Label>
+                                        <engine:VisualElement name="Tag" class="tag">
+                                            <engine:Label name="TagText" text="Tag" class="tag__text text" style="-unity-font-style: bold; font-size: 27px; -unity-text-align: middle-center;">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="articles[4].tag" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                        <engine:Label text="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor." name="ArticleSummary" class="text thumnail-text article-summary-text">
+                                            <Bindings>
+                                                <engine:DataBinding property="text" data-source-path="articles[4].description" binding-mode="ToTarget"/>
+                                            </Bindings>
+                                        </engine:Label>
+                                        <engine:Button text="VIEW" name="Button" class="button" style="margin-top: auto; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+                                            <engine:VisualElement name="ButtonIcon" style="width: 50px; height: 50px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; flex-shrink: 0; background-color: rgb(255, 255, 255); border-top-left-radius: 88px; border-top-right-radius: 88px; border-bottom-right-radius: 88px; border-bottom-left-radius: 88px;"/>
+                                        </engine:Button>
+                                    </engine:VisualElement>
+                                </engine:VisualElement>
+                                <engine:VisualElement name="Article-5" template="Article">
+                                    <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                                    <engine:VisualElement name="ArticleContainer" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; align-items: flex-start; justify-content: flex-start; padding-top: 26px; padding-right: 26px; padding-bottom: 26px; padding-left: 26px; flex-grow: 1;">
+                                        <engine:Label text="Long Article Title" name="ArticleTitle" class="text" style="font-size: 58px; -unity-text-align: middle-left; width: 100%; -unity-font-style: bold; white-space: normal;">
+                                            <Bindings>
+                                                <engine:DataBinding property="text" data-source-path="articles[5].title" binding-mode="ToTarget"/>
+                                            </Bindings>
+                                        </engine:Label>
+                                        <engine:VisualElement name="Tag" class="tag">
+                                            <engine:Label name="TagText" text="Tag" class="tag__text text" style="-unity-font-style: bold; font-size: 27px; -unity-text-align: middle-center;">
+                                                <Bindings>
+                                                    <engine:DataBinding property="text" data-source-path="articles[5].tag" binding-mode="ToTarget"/>
+                                                </Bindings>
+                                            </engine:Label>
+                                        </engine:VisualElement>
+                                        <engine:Label text="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor." name="ArticleSummary" class="text thumnail-text article-summary-text">
+                                            <Bindings>
+                                                <engine:DataBinding property="text" data-source-path="articles[5].description" binding-mode="ToTarget"/>
+                                            </Bindings>
+                                        </engine:Label>
+                                        <engine:Button text="VIEW" name="Button" class="button" style="margin-top: auto; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+                                            <engine:VisualElement name="ButtonIcon" style="width: 50px; height: 50px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; flex-shrink: 0; background-color: rgb(255, 255, 255); border-top-left-radius: 88px; border-top-right-radius: 88px; border-bottom-right-radius: 88px; border-bottom-left-radius: 88px;"/>
+                                        </engine:Button>
+                                    </engine:VisualElement>
+                                </engine:VisualElement>
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:ScrollView>
+                    <engine:VisualElement name="PopupBackground" class="popup-background popup-background-hidden" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(109, 109, 109, 0.25);"/>
+                    <engine:VisualElement name="PopupContainer" class="popup-container popup-container-hidden">
+                        <engine:Label text="Label" name="TitleText" class="text"/>
+                        <engine:Label text="Label" name="ContentText" class="text"/>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+            </engine:VisualElement>
+            <engine:VisualElement name="MenuContainer" usage-hints="GroupTransform" template="Menu" class="menu-container-hidden" style="position: absolute; flex-grow: 1; width: 100%; height: 100%;">
+                <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+                <engine:VisualElement name="BaseContainer" style="flex-grow: 1; align-items: flex-end; margin-top: 26px; margin-right: 26px; margin-bottom: 26px; margin-left: 26px;">
+                    <engine:VisualElement name="MenuBackground" class="menu">
+                        <engine:Button text="App Settings" name="AppSettings" class="button button-margins button__text"/>
+                        <engine:Button text="Account" name="Account" class="button button-margins button__text"/>
+                        <engine:Button text="Toggle App Theme" name="ToggleAppTheme" class="button button-margins button__text"/>
+                        <engine:Button text="Logout" name="Logout" class="button button-margins button-last button__text"/>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

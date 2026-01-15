@@ -1,0 +1,22 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="MainPage" src="project://database/Assets/UI%20Toolkit/MuseumApp/MainPage.uxml?fileID=9197481963319205126&amp;guid=6c7b4febd5a599146888e29647bdab03&amp;type=3#MainPage" />
+    <engine:Template name="Menu" src="project://database/Assets/UI%20Toolkit/MuseumApp/Menu.uxml?fileID=9197481963319205126&amp;guid=73cb93ea3825455478611ecc421227e5&amp;type=3#Menu" />
+    <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp" />
+    <engine:VisualElement name="BaseContainer" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" class="background" style="flex-grow: 1; justify-content: space-between; align-items: stretch;">
+        <engine:VisualElement name="StatusBar" class="status-bar">
+            <engine:Label text="11:11 am&#10;" name="StatusBarText" class="text" />
+            <engine:VisualElement name="Spacer" style="flex-grow: 1;" />
+            <engine:VisualElement name="StatusBarIconsContainer" style="flex-direction: row;">
+                <engine:VisualElement name="StatusBarIcon" class="status-bar__icons" />
+                <engine:VisualElement name="StatusBarIcon" class="status-bar__icons" />
+                <engine:VisualElement name="StatusBarIcon" class="status-bar__icons status-bar__icons-highlighted" />
+                <engine:VisualElement name="StatusBarIcon" class="status-bar__icons" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:Button text="≡" name="ToggleMenu" class="button" style="width: 80px; align-self: flex-end; font-size: 55px; margin-top: 26px; margin-right: 26px; margin-bottom: 0; margin-left: 26px;" />
+        <engine:VisualElement name="AppContent" style="flex-grow: 1;">
+            <engine:Instance template="MainPage" name="MainPage" style="transition-duration: 0.1s;" />
+            <engine:Instance template="Menu" name="MenuContainer" usage-hints="GroupTransform" class="menu-container" style="position: absolute; flex-grow: 1; width: 100%; height: 100%;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
