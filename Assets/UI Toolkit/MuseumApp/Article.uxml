@@ -1,0 +1,13 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Stylesheets/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp" />
+    <engine:VisualElement name="ArticleContainer" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; align-items: flex-start; justify-content: flex-start; padding-top: 26px; padding-right: 26px; padding-bottom: 26px; padding-left: 26px; flex-grow: 1;">
+        <engine:Label text="Long Article Title" name="ArticleTitle" class="text" style="font-size: 58px; -unity-text-align: middle-left; width: 100%; -unity-font-style: bold; white-space: normal;" />
+        <engine:VisualElement name="Tag" class="tag">
+            <engine:Label name="TagText" text="Tag" class="tag__text text" style="-unity-font-style: bold; font-size: 27px; -unity-text-align: middle-center;" />
+        </engine:VisualElement>
+        <engine:Label text="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor." name="ArticleSummary" class="text thumnail-text article-summary-text" />
+        <engine:Button text="VIEW" name="Button" class="button" style="margin-top: auto; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+            <engine:VisualElement name="ButtonIcon" style="width: 50px; height: 50px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; flex-shrink: 0; background-color: rgb(255, 255, 255); border-top-left-radius: 88px; border-top-right-radius: 88px; border-bottom-right-radius: 88px; border-bottom-left-radius: 88px;" />
+        </engine:Button>
+    </engine:VisualElement>
+</engine:UXML>

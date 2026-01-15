@@ -1,0 +1,17 @@
+:root{
+    --status-bar-background-color: rgb(255, 255, 255);
+    --app-background-color: rgb(226, 222, 213);
+    --text-color: rgb(7, 6, 24);
+    --button-color: rgb(126, 115, 231);
+    --button-color-hover:rgb(61, 58, 91);
+    --button-text-color: rgb(221, 220, 239);
+    --highlight-color-1: rgb(227, 123, 109);
+    --highlight-color-2: rgb(195, 56, 72);
+    --tile-background-color: rgb(97, 87, 92);
+    --tile-border-color:rgb(28, 23, 45);
+    --tile-image-tint:rgba(255, 255, 255, 0.73);
+    --tile-background-cover-hover:rgb(123, 110, 116);
+    --scroller-background-color: rgb(97, 87, 92);
+    --image-tint:rgba(255, 242, 254, 0.9);
+    --menu-background-color: rgba(67, 63, 126, 0.98);
+}

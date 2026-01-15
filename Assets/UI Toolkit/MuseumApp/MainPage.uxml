@@ -1,0 +1,53 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="Article" src="project://database/Assets/UI%20Toolkit/MuseumApp/Article.uxml?fileID=9197481963319205126&amp;guid=ac0f350eaf5a2644e9b0c058c68763b6&amp;type=3#Article"/>
+    <engine:Template name="Tile" src="project://database/Assets/UI%20Toolkit/MuseumApp/Tile.uxml?fileID=9197481963319205126&amp;guid=d8ef80e117830de4a8df0374950c84da&amp;type=3#Tile"/>
+    <Style src="project://database/Assets/UI%20Toolkit/MuseumApp/MuseumApp.uss?fileID=7433441132597879392&amp;guid=430f6e01365b25c4988423cf01eeb7a1&amp;type=3#MuseumApp"/>
+    <engine:VisualElement name="BaseContainer" style="flex-grow: 1;">
+        <engine:Label text="PLACEHOLDER" name="Header" class="text header-text">
+            <Bindings>
+                <engine:DataBinding property="text" binding-mode="ToTarget" data-source-path="header"/>
+            </Bindings>
+        </engine:Label>
+        <engine:Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." name="TagLine" class="text" style="white-space: normal; font-size: 35px; -unity-text-align: upper-center; margin-top: 25px; margin-right: 65px; margin-bottom: 25px; margin-left: 65px;"/>
+        <engine:ScrollView horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" name="VerticalScrollView" mouse-wheel-scroll-size="390">
+            <engine:VisualElement name="MainContent" style="flex-grow: 1; margin-right: 30px; margin-left: 30px;">
+                <engine:ScrollView touch-scroll-type="Elastic" horizontal-scroller-visibility="AlwaysVisible" vertical-scroller-visibility="Hidden" mode="Horizontal" name="TilesHorizontalScrollViewTop" mouse-wheel-scroll-size="390" elasticity="0.025" class="tile-container" style="flex-grow: 1;">
+                    <engine:VisualElement name="tilesTopContainer" class="tile-scroll-view">
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesTop[0]"/>
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesTop[1]"/>
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesTop[2]" name=""/>
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesTop[3]" name=""/>
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesTop[4]" name=""/>
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesTop[5]" name=""/>
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesTop[6]" name=""/>
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesTop[7]" name=""/>
+                    </engine:VisualElement>
+                </engine:ScrollView>
+                <engine:VisualElement name="Articles" class="article-container">
+                    <engine:Instance template="Article" name="Article-0" class="article"/>
+                    <engine:Instance template="Article" name="Article-1" class="article"/>
+                </engine:VisualElement>
+                <engine:VisualElement name="Articles" class="article-container">
+                    <engine:Instance template="Article" name="Article-2" class="article"/>
+                    <engine:Instance template="Article" name="Article-3" class="article"/>
+                </engine:VisualElement>
+                <engine:ScrollView touch-scroll-type="Elastic" horizontal-scroller-visibility="AlwaysVisible" vertical-scroller-visibility="Hidden" mode="Horizontal" name="TilesHorizontalScrollViewMiddle" mouse-wheel-scroll-size="390" elasticity="0.025" class="tile-container">
+                    <engine:VisualElement name="tilesMiddleContainer" class="tile-scroll-view">
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesMiddle[0]"/>
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesMiddle[1]"/>
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesMiddle[2]"/>
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesMiddle[3]"/>
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesMiddle[4]"/>
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesMiddle[5]" name=""/>
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesMiddle[6]" name=""/>
+                        <engine:Instance template="Tile" data-source="project://database/Assets/Data/MuseumPlaceholderData.asset?fileID=11400000&amp;guid=369b71707f0a4fa4693138f1669c4077&amp;type=2#MuseumPlaceholderData" data-source-path="tilesMiddle[7]" name=""/>
+                    </engine:VisualElement>
+                </engine:ScrollView>
+                <engine:VisualElement name="Articles" class="article-container">
+                    <engine:Instance template="Article" name="Article-4" class="article"/>
+                    <engine:Instance template="Article" name="Article-5" class="article"/>
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:ScrollView>
+    </engine:VisualElement>
+</engine:UXML>

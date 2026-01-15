@@ -1,0 +1,4 @@
+@import url("/Assets/UI Toolkit/MuseumApp/UnityThemes/UnityDefaultRuntimeTheme.tss");
+
+@import url("/Assets/UI Toolkit/MuseumApp/ColorVariables/ColorVariables_Dark.uss");
+VisualElement {}
